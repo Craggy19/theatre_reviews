@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template!</h2>
-
-
     {% for show in shows %}
        {{ show.category_name }}<br>
        {{ show.show_name }}<br>
