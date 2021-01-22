@@ -10,12 +10,14 @@
     {% block styles %}
     {% endblock %}
     <title>Theatre Reviews</title>
+    
 </head>
 <body>
+    
 
     <header>
         <!-- full screen navbar-->
-        <nav class="nav-extended text-shadow deep-purple lighten-2">
+        <nav class="nav-extended text-shadow red darken-4">
             <div class="nav-wrapper">
             <a href="{{ url_for('get_shows') }}" class="brand-logo">Theatre Reviews</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -23,11 +25,13 @@
                 <li><a href="{{ url_for('get_shows') }}">Home</a></li>
                 <li><a href="#">Log In</a></li>
                 <li><a href="#">Log Out</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
                 <li><a href="#">Add Show</a></li>
             </ul>
             </div>
         </nav>
+
+        <div id="background-image"><img src="{{ url_for('static', filename='images/victoria_palace.jpg') }}" alt="background image"></div>
 
         <!-- side navbar for mobiles -->
         <ul class="sidenav" id="mobile-demo">
@@ -35,7 +39,7 @@
             <li><a href="{{ url_for('get_shows') }}">Home</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="#">Add Show</a></li>
         </ul>
     </header>
