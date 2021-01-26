@@ -1,11 +1,10 @@
-@import url('https://www.fontspace.com/showtime-font-f2471');
-
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-body {background-image: url(../images/victoria_palace.jpg);
+body {background-image: url(../images/theatre.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
@@ -16,5 +15,13 @@ body {background-image: url(../images/victoria_palace.jpg);
 
 .card-panel {
     margin-top: 150px;
+    max-width: 600px;
+    margin-left: 333px;
+}
+
+.brand-logo {
+    margin-left: 5px;
+    font-size: 1.3rem;
+    font-family: 'Ultra', serif;;
 }
 
