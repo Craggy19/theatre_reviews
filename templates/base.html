@@ -16,14 +16,17 @@
     
 
     <header>
+
+    
         <!-- full screen navbar-->
         <nav class="nav-extended text-shadow red darken-4">
             <div class="nav-wrapper">
+                <i class="fas fa-theater-masks"></i>
             <a href="{{ url_for('get_shows') }}" class="brand-logo">Theatre Reviews</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_shows') }}">Home</a></li>
-                <li><a href="#">Log In</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="#">Log Out</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
                 <li><a href="#">Add Show</a></li>
@@ -31,17 +34,19 @@
             </div>
         </nav>
 
-        <div id="background-image"><img src="{{ url_for('static', filename='images/victoria_palace.jpg') }}" alt="background image"></div>
+       
 
         <!-- side navbar for mobiles -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align light-blue-text text-darken-4">Theatre Reviews</h4></li>
             <li><a href="{{ url_for('get_shows') }}">Home</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="#">Log Out</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="#">Add Show</a></li>
         </ul>
+
+        
     </header>
 
     {% block content %}
