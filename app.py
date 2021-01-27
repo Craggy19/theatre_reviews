@@ -28,7 +28,7 @@ def get_shows():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if user already registered
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -42,19 +42,16 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put new user into session
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for(
-            "profile", username=session["user"]))
-
     return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # check if user already registered
+        # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -64,19 +61,18 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
             else:
-                # invalid password
-                flash("Incorrect username and/or password")
+                # invalid password match
+                flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
             # username doesn't exist
-            flash("Incorrect username and/or password")
+            flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

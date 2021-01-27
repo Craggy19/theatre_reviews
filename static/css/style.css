@@ -16,12 +16,21 @@ body {background-image: url(../images/theatre.jpg);
 .card-panel {
     margin-top: 150px;
     max-width: 600px;
-    margin-left: 333px;
+    position: relative;
+    margin-left: 120px;
 }
 
 .brand-logo {
     margin-left: 5px;
     font-size: 1.3rem;
     font-family: 'Ultra', serif;;
+}
+
+.flashes h4 {
+    line-height: 2;
+}
+
+.center-align {
+    font-family: 'Ultra', serif;
 }
 
