@@ -19,9 +19,23 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+# Route decorator to navigate to the home page
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/get_shows")
 def get_shows():
     shows = mongo.db.shows.find()
+    return render_template("shows.html", shows=shows)
+
+
+@app.route("/search", methods=["GET", "POST"])
+# allow users find shows using search
+def search():
+    query = request.form.get("query")
+    shows = list(mongo.db.shows.find({"$text": {"$search": query}}))
     return render_template("shows.html", shows=shows)
 
 
@@ -85,17 +99,39 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
+        user = mongo.db.users.find_one({"username": session['user']})
+        shows = mongo.db.shows.find({"created_by": session['user']})
+        shows = list(shows)
+        return render_template("profile.html", username=username, shows=shows)
+    else:
+        return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
-        # remove user from session cookies
+    # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_show", methods=["GET", "POST"])
+def add_show():
+    # takes user input to send to DB
+    if request.method == "POST":
+        shows = {
+            "url": request.form.get("url"),
+            "show_name": request.form.get("show_name"),
+            "writer": request.form.get("writer"),
+            "theatre_name": request.form.get("theatre_name"),
+            "created_by": session["user"]
+        }
+        # post users input to MongoDB
+        mongo.db.shows.insert_one(shows)
+        flash("New Show Successfully Added!")
+        return redirect(url_for("get_shows"))
+
+    return render_template("add_show.html")
 
 
 if __name__ == "__main__":

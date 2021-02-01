@@ -1,11 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for show in shows %}
-       {{ show.category_name }}<br>
-       {{ show.show_name }}<br>
-       {{ show.writer }}<br>
-       {{ show.theatre_name }}<br> 
-    {% endfor %}
+{% for show in shows %}
+{{ show.category_name }}<br>
+{{ show.show_name }}<br>
+{{ show.writer }}<br>
+{{ show.theatre_name }}<br>
+{% endfor %}
+
+<div class="row card">
+   <h3 class="center-align">View our Shows and Add your own!</h3>
+   <form action="{{ url_for('search') }}" method="post" class="col s12">
+      <div class="row center-align">
+         <div class="input-field col s12 m8">
+            <i class="fas fa-search prefix"></i>
+            <input type="text" name="query" id="query" minlength="5" class="validate" required>
+            <label for="query">Search for your favourite show...</label>
+         </div>
+         <div class="col s12 m4">
+            <a href="{{ url_for('get_shows') }}" class="btn white-text red darken-4">Clear</a>
+            <button type="submit" class="btn white-text red darken-4">
+            <i class="fas fa-search left"></i>Search
+            </button>
+         </div>
+      </div>
+      <!--button to add a new show-->
+      {% if session.user %}
+      <div class="card-action center">
+         <a href="{{ url_for('add_show') }}" class="white-text red darken-4 center-align">
+         Add your own show reviews
+         </a>
+      </div>
+      {% endif %}
+   </form>
+</div>
+
+
 
 {% endblock %}

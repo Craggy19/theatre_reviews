@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--homepage card-->
+
+<div class="row">
+<form class="col s12 m8 offset-m2">
+    <div class="card-panel">
+            <h2 class="center-align">Theatre Reviews</h2>
+        <p class="center-align">Welcome to Theatre Review. It is the perfect site
+             to see other peoples thoughts on plays they have seen, or even add you own review </p>
+
+        {% if session.user %}
+        <div class="card-action center">
+            <a href="{{ url_for('get_shows') }}" class="white-text red darken-4 center-align">View Shows</a>
+        </div>
+        {% else %}
+        <div class="card-action center">
+            <a href="{{ url_for('login') }}" class="white-text red darken-4 center-align">Log In</a>
+            <a href="{{ url_for('register') }}" class="white-text red darken-4 center-align">Register</a>
+        </div>
+        {% endif %}
+    </div>
+</form>
+</div>
+
+
+
+{% endblock %}

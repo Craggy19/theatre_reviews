@@ -34,3 +34,9 @@ body {background-image: url(../images/theatre.jpg);
     font-family: 'Ultra', serif;
 }
 
+.card-panel {
+    max-width: 1000px;
+    position: relative;
+    
+}
+
