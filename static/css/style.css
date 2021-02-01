@@ -15,7 +15,7 @@ body {background-image: url(../images/theatre.jpg);
 
 .card-panel {
     margin-top: 150px;
-    max-width: 600px;
+   
     position: relative;
     margin-left: 120px;
 }
@@ -32,11 +32,5 @@ body {background-image: url(../images/theatre.jpg);
 
 .center-align {
     font-family: 'Ultra', serif;
-}
-
-.card-panel {
-    max-width: 1000px;
-    position: relative;
-    
 }
 
