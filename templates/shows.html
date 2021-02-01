@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for show in shows %}
-{{ show.category_name }}<br>
-{{ show.show_name }}<br>
-{{ show.writer }}<br>
-{{ show.theatre_name }}<br>
-{% endfor %}
-
 <div class="row card">
    <h3 class="center-align">View our Shows or Add your own!</h3>
    <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -36,18 +29,20 @@
 </div>
 
     <ul class="collapsible">
+        {% for show in shows %}
         <li>
-            <div class="collapsible-header white-text red darken-4"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text red darken-4">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ show.show_name }}</strong> 
+            </div>
+            <div class="collapsible-body white">
+                <strong>{{ show.category_name }}</strong>
+                <p>{{ show.writer }}</p>
+                <p>{{ show.theatre_name }}</p>
+                <p>{{ show.review }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text red darken-4"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text red darken-4"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 
