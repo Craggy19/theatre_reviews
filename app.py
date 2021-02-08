@@ -134,6 +134,13 @@ def add_show():
     return render_template("add_show.html", categories=categories)
 
 
+@app.route("/edit_show/<show_id>", methods=["GET", "POST"])
+def edit_show(show_id):
+    show = mongo.db.shows.find_one({"_id": ObjectId(show_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_show.html", show=show, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
