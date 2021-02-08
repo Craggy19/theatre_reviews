@@ -117,6 +117,19 @@ def logout():
 
 @app.route("/add_show", methods=["GET", "POST"])
 def add_show():
+    if request.method == "POST":
+        show = {
+            "category_name": request.form.get("category_name"),
+            "show_name": request.form.get("show_name"),
+            "writer": request.form.get("writer"),
+            "theatre_name": request.form.get("theatre_name"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.shows.insert_one(show)
+        flash("Show Added Successfully")
+        return redirect(url_for("get_shows"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_show.html", categories=categories)
 
