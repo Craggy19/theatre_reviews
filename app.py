@@ -136,6 +136,18 @@ def add_show():
 
 @app.route("/edit_show/<show_id>", methods=["GET", "POST"])
 def edit_show(show_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "show_name": request.form.get("show_name"),
+            "writer": request.form.get("writer"),
+            "theatre_name": request.form.get("theatre_name"),
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.shows.update({"_id": ObjectId(show_id)}, submit)
+        flash("Show Updated Successfully")
+
     show = mongo.db.shows.find_one({"_id": ObjectId(show_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_show.html", show=show, categories=categories)
