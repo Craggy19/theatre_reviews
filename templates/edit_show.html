@@ -8,9 +8,13 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Genre</option>
+                    <option value="" disabled>Genre</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == show.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                  </select>
                 <label for="category_name">Show Category</label>
@@ -21,7 +25,7 @@
          <div class="input-field col s12">
             <i class="fas fa-theater-masks prefix"></i>
             <textarea id="show_name" name="show_name" minlength="5" maxlength="200" 
-               class="materialize-textarea validate" required></textarea>
+              class="materialize-textarea validate" required>{{ show.show_name }}</textarea>
             <label for="show_name">Show Name</label>
          </div>
       </div>
@@ -29,7 +33,7 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="fas fa-user prefix"></i>
-            <textarea id="writer" name="writer" class="materialize-textarea validate" required></textarea>
+            <textarea id="writer" name="writer" class="materialize-textarea validate" required>{{ show.writer }}</textarea>
             <label for="writer">Writers Name</label>
          </div>
       </div>
@@ -37,7 +41,7 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="fas fa-ticket-alt prefix"></i>
-            <textarea id="theatre_name" name="theatre_name" class="materialize-textarea validate" required></textarea>
+            <textarea id="theatre_name" name="theatre_name" class="materialize-textarea validate" required>{{ show.theatre_name }}</textarea>
             <label for="theatre_name">Theatre Name</label>
          </div>
       </div>
@@ -45,13 +49,16 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="fas fa-pencil-alt prefix"></i>
-            <textarea id="review" name="review" class="materialize-textarea validate" required></textarea>
+            <textarea id="review" name="review" class="materialize-textarea validate" required>{{ show.review }}</textarea>
             <label for="review">Your Review</label>
          </div>
       </div>
       <!--Edit button-->
       <div class="row">
          <div class="col s12 center-align">
+             <a href="{{ url_for('get_shows') }}" class="btn-large red darken-4">
+                 Cancel <i class="fas fa-times-circle right"></i>
+             </a>
             <button class="btn-large waves-effect red darken-4" type="submit">Edit Review
             <i class="fas fa-edit"></i>
             </button>
