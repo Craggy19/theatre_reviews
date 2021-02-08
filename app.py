@@ -153,6 +153,13 @@ def edit_show(show_id):
     return render_template("edit_show.html", show=show, categories=categories)
 
 
+@app.route("/delete_show/<show_id>")
+def delete_show(show_id):
+    mongo.db.shows.remove({"_id": ObjectId(show_id)})
+    flash("Show Successfully Deleted")
+    return redirect(url_for("get_shows"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
