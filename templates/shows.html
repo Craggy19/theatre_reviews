@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row card">
+<div class="row card grey lighten-2">
    <h3 class="center-align">View our Shows or Add your own!</h3>
    <form action="{{ url_for('search') }}" method="post" class="col s12">
       <div class="row center-align">
@@ -20,7 +20,7 @@
       <!--button to add a new show-->
       {% if session.user %}
       <div class="card-action center">
-         <a href="{{ url_for('add_show') }}" class="white-text red darken-4 center-align">
+         <a href="{{ url_for('add_show') }}" class="btn-large white-text red darken-4 center-align">
          Add your own show reviews
          </a>
       </div>
@@ -40,6 +40,7 @@
                 <p>{{ show.writer }}</p>
                 <p>{{ show.theatre_name }}</p>
                 <p>{{ show.review }}</p>
+                <p><em>by: {{ show.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}

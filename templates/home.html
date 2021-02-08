@@ -5,19 +5,19 @@
 
 <div class="row">
 <form class="col s12 m8 offset-m2">
-    <div class="card-panel center-align">
+    <div class="card-panel center-align grey lighten-2">
             <h2 class="center-align">Theatre Reviews</h2>
         <p class="center-align">Welcome to Theatre Review. It is the perfect site
              to see other peoples thoughts on plays they have seen, or even add your own review </p>
 
         {% if session.user %}
         <div class="card-action center">
-            <a href="{{ url_for('get_shows') }}" class="white-text red darken-4 center-align">View Shows</a>
+            <a href="{{ url_for('get_shows') }}" class="btn-large white-text red darken-4 center-align">View Shows</a>
         </div>
         {% else %}
         <div class="card-action center">
-            <a href="{{ url_for('login') }}" class="white-text red darken-4 center-align">Log In</a>
-            <a href="{{ url_for('register') }}" class="white-text red darken-4 center-align">Register</a>
+            <a href="{{ url_for('login') }}" class="btn-large white-text red darken-4 center-align">Log In</a>
+            <a href="{{ url_for('register') }}" class="btn-large white-text red darken-4 center-align">Register</a>
         </div>
         {% endif %}
     </div>

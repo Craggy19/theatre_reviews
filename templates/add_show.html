@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row card-panel white">
+<div class="row card-panel grey lighten-2">
    <h2 class="center-align">Add Your Own Show Review</h2>
    <form class="col s12" method="POST" action="{{ url_for('add_show') }}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="" disabled selected>Genre</option>
                     {% for category in categories %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
@@ -37,8 +37,8 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="fas fa-ticket-alt prefix"></i>
-            <textarea id="theatre" name="theatre" class="materialize-textarea validate" required></textarea>
-            <label for="theatre">Theatre Name</label>
+            <textarea id="theatre_name" name="theatre_name" class="materialize-textarea validate" required></textarea>
+            <label for="theatre_name">Theatre Name</label>
          </div>
       </div>
       <!--add review-->
@@ -52,12 +52,12 @@
       <!--submit button-->
       <div class="row">
          <div class="col s12 center-align">
-            <a href="{{ url_for('get_shows') }}" class="btn waves-effect red darken-4">
+            <a href="{{ url_for('get_shows') }}" class="btn-large waves-effect red darken-4">
             Cancel
             <i class="fas fa-times right"></i>
             </a>
-            <button class="btn waves-effect red darken-4" type="submit">Add Review
-            <i class="fas fa-check"></i>
+            <button class="btn-large waves-effect red darken-4" type="submit">Add Review
+            <i class="fas fa-plus-square right"></i>
             </button>
          </div>
       </div>
