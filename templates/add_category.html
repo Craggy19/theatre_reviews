@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row card-panel grey lighten-2">
+   <h2 class="center-align">Add a Category</h2>
+   <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
+     <!--add category-->
+      <div class="row">
+         <div class="input-field col s12">
+            <i class="fas fa-folder-open prefix"></i>
+            <textarea id="category_name" name="category_name" minlength="3" maxlength="25" 
+               class="materialize-textarea validate" required></textarea>
+            <label for="category_name">Category Name</label>
+         </div>
+      </div>
+      <!--submit button-->
+      <div class="row">
+         <div class="col s12 center-align">
+            <a href="{{ url_for('get_shows') }}" class="btn-large waves-effect red darken-4">
+            Cancel
+            <i class="fas fa-times right"></i>
+            </a>
+            <button class="btn-large waves-effect red darken-4" type="submit">Add Category
+            <i class="fas fa-plus-square right"></i>
+            </button>
+         </div>
+      </div>
+   </form>
+</div>
+
+
+{% endblock %}
