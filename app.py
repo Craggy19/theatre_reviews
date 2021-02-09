@@ -1,3 +1,4 @@
+  
 import os
 from flask import (
     Flask, flash, render_template,
@@ -158,6 +159,12 @@ def delete_show(show_id):
     mongo.db.shows.remove({"_id": ObjectId(show_id)})
     flash("Show Successfully Deleted")
     return redirect(url_for("get_shows"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":
