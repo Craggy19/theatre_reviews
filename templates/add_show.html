@@ -52,11 +52,12 @@
       <!--submit button-->
       <div class="row">
          <div class="col s12 center-align">
+            <a href="{{ url_for('add_show') }}" class="btn-large waves-effect red darken-4">Clear</a>
             <a href="{{ url_for('get_shows') }}" class="btn-large waves-effect red darken-4">
             Cancel
             <i class="fas fa-times right"></i>
             </a>
-            <button class="btn-large waves-effect red darken-4" type="submit">Add Review
+            <button class="center-align btn-large waves-effect red darken-4" type="submit">Add Review
             <i class="fas fa-plus-square right"></i>
             </button>
          </div>
