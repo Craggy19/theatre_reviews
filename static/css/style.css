@@ -33,10 +33,20 @@ body {background-image: url(../images/theatre.jpg);
 }
 
 .btn-small {
-    margin: 5px;
+    
+    margin-left: 5px;
 }
 
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
+}
+
+.fa-trash {
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+.fa-edit {
+    padding-left: 20px;
 }
