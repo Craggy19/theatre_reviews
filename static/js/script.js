@@ -3,7 +3,5 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('select').formSelect();
     $(".tooltipped").tooltip();
-$(document).ready(function(){
     $('.modal').modal();
-  });
   });

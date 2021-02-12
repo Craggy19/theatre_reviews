@@ -3,19 +3,7 @@
 
     <div class="row card grey lighten-2">
     <h3 class="center-align">ALL SHOWS!</h3>
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search for your favourite show</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_shows') }}" class="btn white-text red darken-4">Clear</a>
-                    <button type="submit" class="center-align btn white-text red darken-4">
-                    <i class="fas fa-search left"></i>Search
-                    </button>
-                </div>
+        
             </div>
             <!--button to add a new show-->
             {% if session.user %}
@@ -28,10 +16,9 @@
         </form>
     </div>
 
-    
     <ul class="collapsible">
         {% for show in shows %}
-        <li>
+        <li class="collapsible-li">
             <div class="collapsible-header white-text red darken-4">
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
@@ -45,7 +32,7 @@
                         <a class="modal-trigger tooltipped" href="#modal-confirm-{{show._id}}" data-position="top"
 							data-tooltip="Delete"><i class="fas fa-trash right">Delete</i></a>
 
-                    {% endif %}
+                {% endif %}
                      <div id="modal-confirm-{{show._id}}" class="modal blue darken-2">
 							<div class="modal-content center-align">
 								<h5>Are You Sure You Want To Delete This Show?</h5>
