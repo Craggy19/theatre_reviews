@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 
+@media only screen and (max-width:636px) {
+    .brand-logo {
+        font-size: 19px;
+    }
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -20,7 +26,7 @@ body {background-image: url(../images/theatre.jpg);
 
 .brand-logo {
     margin-left: 5px;
-    font-size: 1.3rem;
+    font-size: 30px;
     font-family: 'Ultra', serif;
 }
 
