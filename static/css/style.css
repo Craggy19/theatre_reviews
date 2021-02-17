@@ -7,7 +7,7 @@
 body {background-image: url(../images/theatre.jpg);
     background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -53,6 +53,17 @@ body {background-image: url(../images/theatre.jpg);
 
 @media only screen and (max-width:632px) {
     .brand-logo {
-        font-size: 19px;
+        font-size: 19px !important;
     }
+}
+
+.fa-theater-masks {
+    margin-left: 20px;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-bottom: 0px;
 }
