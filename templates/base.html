@@ -29,7 +29,6 @@
                     <li><a href="{{ url_for('get_shows') }}" class="nav-item">Shows</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('add_show') }}">Add Show</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         {% if session.user|lower == "admin"|lower %}
                             <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                         {% endif %}
@@ -48,7 +47,6 @@
                 <li><a href="{{ url_for('get_shows') }}" class="nav-item">Shows</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_show') }}">Add Show</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                     {% endif %}                    
@@ -87,15 +85,7 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
-    <footer class="footer">
-          
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          
-        </footer>
-
+    
 </body>
 
 </html>
