@@ -28,6 +28,7 @@ body {background-image: url(../images/theatre.jpg);
 
 .flashes h4 {
     line-height: 2;
+    color: white;
 }
 
 .center-align {
@@ -88,6 +89,7 @@ footer {
       height: 60px;
       width: 100%;
     }
+
 
 
 
