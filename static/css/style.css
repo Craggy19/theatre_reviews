@@ -40,6 +40,10 @@ body {background-image: url(../images/theatre.jpg);
     margin-left: 5px;
 }
 
+.btn-large {
+    padding: 5px;
+}
+
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;

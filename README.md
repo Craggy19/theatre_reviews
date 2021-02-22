@@ -1,45 +1,67 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Theatre Review
 
-Welcome Craggy19,
+This site is for all to use. You can view shows that others have seen and see what they had to say about them. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+For a more interactive experience you can Register and add your own thoughts about your own experiences at the theatre, whether they are in London or your own local theatres.
 
-## Gitpod Reminders
+The site allows users to Create, Read, Update and Delete any shows they have input themselves. They can also read what others have written but cannot alter them in any way.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
 
-`python3 -m http.server`
+![alt text](static/images/screensizes.PNG)
 
-A blue button should appear to click: *Make Public*,
+There are so many Theatres throughout the UK that it would be impossible to search each one individually. This site would make that much easier. The search facility will help you look up a show you would like to see and check on other peoples opinions on the show. You could also look for inspiration for something new for you to see.
 
-Another blue button should appear to click: *Open Browser*.
+Visitors to the site can:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* View shows that have been added.
+* Read reviews that have been written.
+* Search for shows.
+* Register an account for free.
+* Login (if already registered).
+* Logout of my account
 
-A blue button should appear to click: *Make Public*,
+Registered members can:
 
-Another blue button should appear to click: *Open Browser*.
+* View shows that have been added.
+* Read reviews that have been written.
+* Search for shows.
+* Login.
+* Create new shows they have seen.
+* Update or Edit shows they have added.
+* Delete shows they have added.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+There is also an Admin Login which allows the owner to add, edit or delete genres where necessary.
 
-## Updates Since The Instructional Video
+## User Stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* As a user I would want a site that is easy to use and navigate round.
+* As a user I want to have an aesthetically pleasing site
+* As a user I would want a free to register account.
+* As a user I would want to see what shows are around.
+* As a user I want to be able to register as a member.
+* As a user I would like to add my own reviews.
+* As a user I would want to be able to update my reviews.
+* As a user I would want to be able to delete my reviews.
+* As a user I would want to read other peoples reviews.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Developer Aims
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* As a developer I want to create a visually pleasing site.
+* As a developer I want to make a site that is easy to follow.
+* As a developer I want to give the user the ability to Create, Read, Update and Delete their own reviews.
+* Show an understanding of the Key components used in development, ie MongoDb, Heroku, Python and GitHub.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
 
-Happy coding!
+
+
+
+
+
+
+
