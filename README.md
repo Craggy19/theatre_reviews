@@ -142,9 +142,45 @@ The Background I used is of Edinburgh Festival Theatre and the image itself was 
             
  # Testing
 
+I have set up and tested all components of the site from the Navbar down. The Navbar changes from a vertical list on large screens down to a burger icon on smaller screens.
+
+The Navbar lists change depending on if the user is logged in or not. These have all been tested without a problem.
+
+#### If user is not logged in:
+
+Navbar will show 
+* Home.
+* Shows.
+* Log In.
+* Register. 
 
 
+#### If user is logged in:
 
+Navbar will show
+* Home.
+* Shows.
+* Add Shows.
+* Log Out.
+
+
+---
+
+### **Home Page**
+
+**As a new unregistered user.**
+
+All navbar options were tested to check the correct navigation. Within the page there is a brief description
+of the site which also contains the buttons Log In and Register. These buttons have also been tested for correct navigation. 
+
+**As a user that has logged in successfully**
+
+The navbar options are different and also checked for correct navigation. Inside the brief site description now
+is an option to view all the Shows that have been reviewed. This button has also been tested. 
+
+---
+
+### **Shows Page**
 
 
 
