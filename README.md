@@ -51,8 +51,30 @@ There is also an Admin Login which allows the owner to add, edit or delete genre
 * As a developer I want to make a site that is easy to follow.
 * As a developer I want to give the user the ability to Create, Read, Update and Delete their own reviews.
 * Show an understanding of the Key components used in development, ie MongoDb, Heroku, Python and GitHub.
+* As a developer I want the user to be encouraged to interact with the site easily.
 
 
+## Wireframes
+
+I used Balsamiq for my wireframes and showed each page as a monitor size, a tablet size and a mobile phone size. 
+
+[Link to Wireframe](https://github.com/Craggy19/theatre_reviews/blob/master/static/images/theatre_wireframes.pdf)
+
+## Layout
+
+I chose the background for my site as it shows the inside of a theatre and it gve me the ideas for the colour scheme. 
+
+The colours I used best depicted the theatre and the usual colour of the curtain in front of a stage.
+
+I chose the typography as a warm and fun font that I found on [Google Fonts](https://fonts.google.com/)
+I felt it suited the layout of the pages. I used it as the main header for the site and also on the headings of each individual page.
+
+## Images
+
+The Background I used is of Edinburgh Festival Theatre and the image itself was taken from Google images and the actual image came from Time Out magazine. [Background Image.](https://www.timeout.com/edinburgh/theatre/edinburgh-festivals-2015-theatre-reviews)
+
+
+ 
 
 
 
