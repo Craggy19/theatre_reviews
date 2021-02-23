@@ -74,7 +74,7 @@ I felt it suited the layout of the pages. I used it as the main header for the s
 The Background I used is of Edinburgh Festival Theatre and the image itself was taken from Google images and the actual image came from Time Out magazine. [Background Image.](https://www.timeout.com/edinburgh/theatre/edinburgh-festivals-2015-theatre-reviews)
 
 
- 
+ # Features
 
 
 
