@@ -53,6 +53,13 @@ There is also an Admin Login which allows the owner to add, edit or delete genre
 * Show an understanding of the Key components used in development, ie MongoDb, Heroku, Python and GitHub.
 * As a developer I want the user to be encouraged to interact with the site easily.
 
+#### Site Owners Aim
+
+* As the site owner I would want the user to enjoy using the site and to ask their friends to jin as well
+* As the site owner I would hope to learn about more shows myself and be encouraged to go to see them.
+* As the site owner I would, eventually, hope to encourage show producers to see the site as a possible way of advertising and therefore make a small income.
+ 
+
 
 ## Wireframes
 
@@ -228,7 +235,48 @@ All these buttons have been tested accordingly.
 
 ---
 
+## **Friends and colleagues testing**
 
+I sent my link to friends and colleagues to test and generally I received good feedback. 
+The main (minor) issues were aesthetic and were soon resolved, these included colour scheme changes on Modals and pop up messages.
+Another issue was the spacing on some of the buttons needed to be increased. this was changed accordingly. 
+
+---
+
+# BUGS
+
+During the process one or two bugs came about.
+* When putting in a pop up I had an error stating the Cursor len was incorrect. I spoke to my mentor and he suggested a different Jinja code and this solved my issue. 
+Instead of using
+
+{% if shows|length > 0 %} 
+
+I just used 
+
+{% for show in shows %}
+
+  {# my code here #}
+
+{% else %}
+  <p>Sorry, no results found</p>
+{% endfor %}
+
+This then worked as expected.
+
+* Another bug was on screen sizes. My header title was always to large for small size screens like mobiles. 
+I adjusted the sizes in CSS to fit accordingly. It works perfectly on my iphone and also on the inspect section for phones and tablets
+
+* Most of the default font colours needed to be altered to fit with my colour sceme for the website.
+
+* Once I was nearing completion for the site and was looking through I realised that the profile page I had designed was quite unnecessary, this was confirmed by my mentor 
+and therefore I decided to delete it and carry on without. 
+
+---
+
+
+
+
+ 
 
 
 
