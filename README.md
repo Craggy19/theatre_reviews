@@ -99,6 +99,7 @@ The Background I used is of Edinburgh Festival Theatre and the image itself was 
 * Install a marks out of ten for each show 
 * From the marks out of ten I would like to create a Top Ten Shows list.
 
+
 # Technologies Used
 
 * [HTML](https://html.com/). 
@@ -180,7 +181,56 @@ is an option to view all the Shows that have been reviewed. This button has also
 
 ---
 
+### **Register Page**
+
+Navbar tested and all links work correctly. Input works for Username and Password, Register button takes you to a profile page stating Registration successful
+and shows that no results are found, this is because the new user hasn't reviewed any shows currently. 
+The page also has a button to add a show review, which will tale you to the Add Show Page,
+or to search for shows in the database. The reset button will take you to the shows page with all reviewed content.
+Finally there is a button with "Already Registered? Log In Here" option which will take you to the Login Page.
+If you input a username, that has already been used, there will be a pop up stating "Username already exists".
+
+---
+
+### **LogIn Page**
+
+Navbar tested and all links work correctly. Input for username and password are filled out and Log In button takes you to a shows page with all the shows you have currently reviewed under that login. 
+There is also a banner welcoming the user to the site. The reset button will take you to All shows reviewed by you and other members for you to view. The search button works as before on the register page.
+If you are not currently a member you have the option to register an account, this button will return you to the Register Page.
+
+
+---
+
+### **Add Show Page**
+
+Navbar tested and all links work correctly. Adding a show for user to review is simple. The genre section is a dropdown option which should cover most topics. Then just fill in the sections accordingly. Finally hit the Add Show button 
+and you will be taken back to the All Shows page with a banner stating "Show Added Successfully"
+There is also an option to cancel or clear and start again. All buttons tested without a problem.
+
+---
+
 ### **Shows Page**
+
+Navbar tested and all links work correctly. If you are logged in as a member the Shows Page will show a list of all shows and if you added them you will have
+the option to edit or delete those shows, you will be able to tell as they will have an edit or delete icon next to the show name. If others have added them you will not have this option.
+If you wish to delete your review click on the bin icon and a modal will pop up to confirm your request. If you click on the edit icon you will be taken to the Edit Show screen which you can then
+change whatever you need to and then submit. This will have a pop up saying "Show Updated Successfully".
+The search area allows you to look up either a show name or a writers name. If no name or show is found a pop up stating "No Results Found". Just reset and try again.
+If you click on the individual show it will dropdown to show the deatils of that show. 
+All these buttons have been tested and work as expected.
+
+---
+
+### **Admin Page**
+
+There is an Admin Page that is only available if logged in as Admin. This has the ability to Add, Edit or Delete genres of shows.
+All these buttons have been tested accordingly.
+
+---
+
+
+
+
 
 
 
