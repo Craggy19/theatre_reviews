@@ -45,7 +45,7 @@
 							data-tooltip="Delete"><i class="white-text fas fa-trash right"></i></a>
 
                 {% endif %}
-                     <div id="modal-confirm-{{show._id}}" class="modal blue darken-2">
+                     <div id="modal-confirm-{{show._id}}" class="modal red darken-4">
 							<div class="modal-content center-align">
 								<h5>Are You Sure You Want To Delete This Show?</h5>
 								<a href="{{url_for('delete_show', show_id=show._id)}}"
