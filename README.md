@@ -58,7 +58,7 @@ There is also an Admin Login which allows the owner to add, edit or delete genre
 * As the site owner I would want the user to enjoy using the site and to ask their friends to jin as well
 * As the site owner I would hope to learn about more shows myself and be encouraged to go to see them.
 * As the site owner I would, eventually, hope to encourage show producers to see the site as a possible way of advertising and therefore make a small income.
- 
+
 
 
 ## Wireframes
@@ -249,7 +249,9 @@ During the process one or two bugs came about.
 * When putting in a pop up I had an error stating the Cursor len was incorrect. I spoke to my mentor and he suggested a different Jinja code and this solved my issue. 
 Instead of using
 
-{% if shows|length > 0 %} 
+{% if shows|length > 0 %}
+
+{% endif %}
 
 I just used 
 
@@ -271,17 +273,4 @@ I adjusted the sizes in CSS to fit accordingly. It works perfectly on my iphone 
 * Once I was nearing completion for the site and was looking through I realised that the profile page I had designed was quite unnecessary, this was confirmed by my mentor 
 and therefore I decided to delete it and carry on without. 
 
----
-
-
-
-
- 
-
-
-
-
-
-
-
-
+--- 
